@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#f47b20"
+    >
+
+    <title>Varma Fancy Numbers</title>
+
+    <link
+        rel="stylesheet"
+        href="css/header.css"
+    >
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header
+    class="main-header"
+    id="topHeader"
+>
+
+
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
+
+    <div class="top-header">
+
+
+        <!-- LOGO -->
+
+        <a
+            class="logo-area"
+            href="#home"
+            aria-label="Varma Fancy Numbers"
+        >
+
+            <img
+                src="img/Company Logo.png"
+                alt="Varma Fancy Numbers"
+            >
+
+        </a>
+
+
+
+        <!-- =================================================
+             HEADER SEARCH
+        ================================================== -->
+
+        <div class="header-search">
+
+            <input
+                id="headerSearch"
+                type="search"
+                placeholder="Search your lucky number..."
+                autocomplete="off"
+            >
+
+            <button
+                id="headerSearchBtn"
+                type="button"
+                aria-label="Search"
+            >
+
+                <span class="search-svg">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <circle
+                            cx="10.8"
+                            cy="10.8"
+                            r="6.8"
+                        ></circle>
+
+                        <path
+                            d="M16 16l5 5"
+                        ></path>
+
+                    </svg>
+
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="header-right">
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-box">
+                <div class="custom-language">
+
+                    <button
+                        type="button"
+                        id="languageButton"
+                        class="language-button"
+                    >
+
+                        <span id="selectedLanguage">
+                            English
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="language-menu"
+                        id="languageMenu"
+                    >
+
+                        <button
+                            type="button"
+                            data-language="en"
+                        >
+                            English
+                        </button>
+
+                        <button
+                            type="button"
+                            data-language="te"
+                        >
+                            తెలుగు
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATE & TIME -->
+
+            <div class="datetime-box">
+
+                <span id="currentDate">
+                    Loading...
+                </span>
+
+                <strong id="currentTime">
+                    00:00:00 AM
+                </strong>
+
+            </div>
+
+
+
+            <!-- LOGIN -->
+
+            <button
+                class="login-user"
+                id="openLogin"
+                type="button"
+            >
+
+                <span class="user-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="4"
+                        ></circle>
+
+                        <path
+                            d="M4 21c.8-4.2 3.4-6.2 8-6.2s7.2 2 8 6.2"
+                        ></path>
+
+                    </svg>
+
+                </span>
+
+
+                <span class="login-text">
+
+                    <small id="loginGreeting">
+                        Hello, Please Login
+                    </small>
+
+                    <b id="loginRegisterText">
+                        Login / Register
+                    </b>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- CART -->
+
+            <button
+                class="cart-button"
+                id="cartButton"
+                type="button"
+                aria-label="Cart"
+            >
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"
+                    ></path>
+
+                    <circle
+                        cx="10"
+                        cy="20"
+                        r="1.4"
+                    ></circle>
+
+                    <circle
+                        cx="18"
+                        cy="20"
+                        r="1.4"
+                    ></circle>
+
+                </svg>
+
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <div class="navigation-wrapper">
+
+        <nav class="main-navigation">
+
+
+            <a
+                class="nav-link active"
+                href="#home"
+            >
+                Home
+            </a>
+
+
+            <a
+                class="nav-link"
+                href="#allNumbers"
+            >
+                All Numbers
+            </a>
+
+
+
+            <!-- =================================================
+                 CATEGORIES DROPDOWN
+            ================================================== -->
+
+            <div class="nav-dropdown">
+
+
+                <button
+                    class="category-button"
+                    id="categoryButton"
+                    type="button"
+                >
+                    Categories
+                </button>
+
+
+                <div
+                    class="category-menu"
+                    id="categoryMenu"
+                >
+
+                    <button
+                        type="button"
+                        data-category="VIP Numbers"
+                    >
+
+                        <span>💎</span>
+
+                        VIP Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Business Numbers"
+                    >
+
+                        <span>💼</span>
+
+                        Business Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Birthday Numbers"
+                    >
+
+                        <span>🎂</span>
+
+                        Birthday Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Couples Numbers"
+                    >
+
+                        <span>❤️</span>
+
+                        Couples Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Repeating Numbers"
+                    >
+
+                        <span>🔁</span>
+
+                        Repeating Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Sequence Numbers"
+                    >
+
+                        <span>🔢</span>
+
+                        Sequence Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Lucky Numbers"
+                    >
+
+                        <span>🍀</span>
+
+                        Lucky Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Premium Numbers"
+                    >
+
+                        <span>👑</span>
+
+                        Premium Numbers
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-category="Budget Numbers"
+                    >
+
+                        <span>₹</span>
+
+                        Budget Numbers
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <a
+                class="nav-link"
+                href="#offers"
+            >
+                Offers
+            </a>
+
+
+            <a
+                class="nav-link"
+                href="#featured"
+            >
+                Fancy Numbers
+            </a>
+
+
+            <a
+                class="nav-link"
+                href="#about"
+            >
+                About Us
+            </a>
+
+
+            <a
+                class="nav-link"
+                href="#contact"
+            >
+                Contact
+            </a>
+
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main id="home">
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section class="hero-section">
+
+
+        <div class="hero-slider">
+
+
+            <div class="hero-slide active">
+
+                <img
+                    src="img/banner1.png"
+                    alt="Fancy Numbers Banner 1"
+                >
+
+            </div>
+
+
+            <div class="hero-slide">
+
+                <img
+                    src="img/banner2.png"
+                    alt="Fancy Numbers Banner 2"
+                >
+
+            </div>
+
+
+            <div class="hero-slide">
+
+                <img
+                    src="img/banner3.png"
+                    alt="Fancy Numbers Banner 3"
+                >
+
+            </div>
+
+
+            <div class="hero-slide">
+
+                <img
+                    src="img/banner4.png"
+                    alt="Fancy Numbers Banner 4"
+                >
+
+            </div>
+
+
+            <div class="hero-slide">
+
+                <img
+                    src="img/banner5.png"
+                    alt="Fancy Numbers Banner 5"
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SLIDER DOTS -->
+
+        <div class="slider-dots">
+
+            <button
+                class="dot active"
+                type="button"
+                aria-label="Slide 1"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Slide 2"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Slide 3"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Slide 4"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Slide 5"
+            ></button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NUMBER SEARCH PANEL
+        ================================================== -->
+
+        <div class="number-search-panel">
+
+
+            <!-- OPERATOR -->
+
+            <div class="operator-select-wrapper">
+
+                <button
+                    class="operator-select"
+                    id="operatorSelect"
+                    type="button"
+                >
+
+                    <span id="selectedOperator">
+                        All Operators
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="operator-menu"
+                    id="operatorMenu"
+                >
+
+                    <button
+                        type="button"
+                        data-operator="All"
+                    >
+                        All Operators
+                    </button>
+
+                    <button
+                        type="button"
+                        data-operator="Airtel"
+                    >
+                        Airtel
+                    </button>
+
+                    <button
+                        type="button"
+                        data-operator="Jio"
+                    >
+                        Jio
+                    </button>
+
+                    <button
+                        type="button"
+                        data-operator="VI"
+                    >
+                        Vi
+                    </button>
+
+                    <button
+                        type="button"
+                        data-operator="BSNL"
+                    >
+                        BSNL
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NUMBER INPUT -->
+
+            <div class="number-input-wrapper">
+
+                <input
+                    id="numberSearch"
+                    type="text"
+                    placeholder="Search mobile number..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <button
+                class="search-numbers-btn"
+                id="searchNumbersBtn"
+                type="button"
+            >
+                Search Numbers
+            </button>
+
+
+
+            <!-- ADVANCED SEARCH -->
+
+            <button
+                class="advanced-search-button"
+                id="advancedSearchButton"
+                type="button"
+            >
+
+                <span class="filter-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path
+                            d="M4 6h16"
+                        ></path>
+
+                        <path
+                            d="M7 12h10"
+                        ></path>
+
+                        <path
+                            d="M10 18h4"
+                        ></path>
+
+                    </svg>
+
+                </span>
+
+                Advanced Search
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORIES SECTION
+    ====================================================== -->
+
+    <section
+        class="fancy-sections categories-section reveal-section"
+        id="categories"
+    >
+
+        <div class="category-row">
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="VIP Numbers"
+            >
+
+                <img
+                    src="img/vip.png"
+                    alt="VIP Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Business Numbers"
+            >
+
+                <img
+                    src="img/business.png"
+                    alt="Business Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Birthday Numbers"
+            >
+
+                <img
+                    src="img/birthday.png"
+                    alt="Birthday Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Couples Numbers"
+            >
+
+                <img
+                    src="img/couple.png"
+                    alt="Couples Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Repeating Numbers"
+            >
+
+                <img
+                    src="img/repeating.png"
+                    alt="Repeating Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Sequence Numbers"
+            >
+
+                <img
+                    src="img/sequence.png"
+                    alt="Sequence Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Lucky Numbers"
+            >
+
+                <img
+                    src="img/lucky.png"
+                    alt="Lucky Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Premium Numbers"
+            >
+
+                <img
+                    src="img/premium.png"
+                    alt="Premium Numbers"
+                >
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                type="button"
+                data-category="Budget Numbers"
+            >
+
+                <img
+                    src="img/budget.png"
+                    alt="Budget Numbers"
+                >
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPECIAL OFFERS
+    ====================================================== -->
+
+   <!-- =========================================================
+     SPECIAL OFFERS
+========================================================= -->
+
+<!-- =========================================================
+     SPECIAL OFFERS
+========================================================= -->
+
+<section
+    class="special-offers reveal-section"
+    id="offers"
+>
+
+    <!-- HEADER -->
+    <div class="special-offers-header">
+
+        <div class="special-offers-heading">
+
+            <img
+                class="fire-icon"
+                src="img/fire.png"
+                alt="Special Offers"
+            >
+
+            <div class="heading-content">
+
+                <span class="offer-mini-title">
+                    LIMITED TIME DEALS
+                </span>
+
+                <h2>
+                    Special Offers
+                </h2>
+
+                <p>
+                    Premium fancy numbers at special prices
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIEW ALL OFFERS -->
+        <button
+            class="view-offers"
+            id="viewOffersBtn"
+            type="button"
+        >
+
+            <span>
+                View All Offers
+            </span>
+
+            <span class="view-arrow">
+                →
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- OFFER CARDS -->
+    <div class="offers-row">
+
+        <button
+            class="offer-card"
+            type="button"
+            data-offer="VIP Offers"
+        >
+
+            <img
+                src="img/offer1.png"
+                alt="VIP Offers"
+            >
+
+        </button>
+
+
+        <button
+            class="offer-card"
+            type="button"
+            data-offer="Business Offers"
+        >
+
+            <img
+                src="img/offer2.png"
+                alt="Business Offers"
+            >
+
+        </button>
+
+
+        <button
+            class="offer-card"
+            type="button"
+            data-offer="Premium Offers"
+        >
+
+            <img
+                src="img/offer3.png"
+                alt="Premium Offers"
+            >
+
+        </button>
+
+
+        <button
+            class="offer-card"
+            type="button"
+            data-offer="Limited Offers"
+        >
+
+            <img
+                src="img/offer4.png"
+                alt="Limited Offers"
+            >
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         FEATURED FANCY NUMBERS
+    ====================================================== -->
+
+   <!-- =========================================================
+     FEATURED FANCY NUMBERS
+========================================================= -->
+
+<section
+    class="featured-numbers-section reveal-section"
+    id="featured"
+>
+
+    <!-- ================================================
+         FEATURED HEADER
+    ================================================= -->
+
+    <div class="featured-header">
+
+        <div class="featured-title-area">
+
+            <div class="featured-star">
+                ★
+            </div>
+
+            <div class="featured-heading-content">
+
+                <span class="featured-mini-title">
+                    PREMIUM COLLECTION
+                </span>
+
+                <h2>
+                    Featured Fancy Numbers
+                </h2>
+
+                <p>
+                    Choose a premium number that matches your style
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="featured-view-all"
+            id="featuredViewAll"
+            type="button"
+        >
+
+            <span>
+                View All
+            </span>
+
+            <span>
+                →
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- ================================================
+         FANCY NUMBER GRID
+         JAVASCRIPT WILL INSERT CARDS
+    ================================================= -->
+
+    <div
+        class="fancy-number-grid"
+        id="fancyNumberGrid"
+    >
+    </div>
+
+
+    <!-- ================================================
+         LOAD MORE
+    ================================================= -->
+
+    <div class="load-more-wrapper">
+
+        <button
+            class="load-more-btn"
+            id="loadMoreBtn"
+            type="button"
+        >
+
+            <span class="load-more-text">
+                Load More
+            </span>
+
+            <span class="load-more-spinner"></span>
+
+            <span class="load-more-arrow">
+                ↓
+            </span>
+
+        </button>
+
+
+        <p
+            class="cards-count"
+            id="cardsCount"
+        >
+            Showing 8 of 50 numbers
+        </p>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         ALL NUMBERS / WHY SECTION
+    ====================================================== -->
+
+ <!-- =========================================================
+     NUMBER CATEGORY CARDS
+========================================================= -->
+
+<section class="number-category-section">
+
+    <div class="number-category-grid">
+
+
+        <!-- BIRTHDAY NUMBERS -->
+
+        <article
+            class="number-category-card birthday-card"
+            data-category="birthday"
+        >
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <h3>
+                    BIRTHDAY<br>
+                    NUMBERS
+                </h3>
+
+
+                <button
+                    type="button"
+                    class="category-explore-btn"
+                    data-category="birthday"
+                >
+                    <span>
+                        Explore Now
+                    </span>
+
+                    <span class="explore-arrow">
+                        →
+                    </span>
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- COUPLE NUMBERS -->
+
+        <article
+            class="number-category-card couple-card"
+            data-category="couple"
+        >
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <h3>
+                    COUPLE<br>
+                    NUMBERS
+                </h3>
+
+
+                <button
+                    type="button"
+                    class="category-explore-btn"
+                    data-category="couple"
+                >
+                    <span>
+                        Explore Now
+                    </span>
+
+                    <span class="explore-arrow">
+                        →
+                    </span>
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BUSINESS NUMBERS -->
+
+        <article
+            class="number-category-card business-card"
+            data-category="business"
+        >
+
+            <div class="category-card-overlay"></div>
+
+
+            <div class="category-card-content">
+
+                <h3>
+                    BUSINESS<br>
+                    NUMBERS
+                </h3>
+
+
+                <button
+                    type="button"
+                    class="category-explore-btn"
+                    data-category="business"
+                >
+                    <span>
+                        Explore Now
+                    </span>
+
+                    <span class="explore-arrow">
+                        →
+                    </span>
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY CHOOSE VARMA FANCY NUMBERS
+========================================================= -->
+
+<!-- =========================================================
+     WHY CHOOSE VARMA FANCY NUMBERS
+========================================================= -->
+
+<section class="why-varma-section">
+
+    <div class="why-varma-container">
+
+        <div class="why-varma-header">
+
+            <div class="why-quote">
+                “
+            </div>
+
+            <h2>
+                Why Choose Varma Fancy Numbers?
+            </h2>
+
+        </div>
+
+
+        <div class="why-features">
+
+
+            <div class="why-feature">
+
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3L20 6V11C20 16.5 16.7 20 12 21C7.3 20 4 16.5 4 11V6L12 3Z"/>
+                        <path d="M9 12L11 14L15 10"/>
+                    </svg>
+                </div>
+
+                <div class="why-text">
+                    <strong>100% Genuine</strong>
+                    <span>&amp; Verified Numbers</span>
+                </div>
+
+            </div>
+
+
+            <div class="why-feature">
+
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 3C7.2 3 4 5.1 4 8C4 10.8 7.2 12 12 12C16.8 12 20 13.2 20 16C20 18.9 16.8 21 12 21"/>
+                        <path d="M12 2V22"/>
+                        <path d="M16 6C15 4.5 13.6 4 11.8 4C9.5 4 8 5.1 8 6.7C8 8.5 9.8 9.2 12 9.7"/>
+                    </svg>
+                </div>
+
+                <div class="why-text">
+                    <strong>Best Prices</strong>
+                    <span>Guaranteed</span>
+                </div>
+
+            </div>
+
+
+            <div class="why-feature">
+
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M13 2L5 13H11L10 22L19 10H13L13 2Z"/>
+                    </svg>
+                </div>
+
+                <div class="why-text">
+                    <strong>Instant Customer</strong>
+                    <span>Support</span>
+                </div>
+
+            </div>
+
+
+            <div class="why-feature">
+
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="6" y="2" width="12" height="20" rx="2"/>
+                        <path d="M9 5H15"/>
+                        <path d="M9 18H15"/>
+                        <path d="M4 9C2.5 10 2.5 14 4 15"/>
+                        <path d="M20 9C21.5 10 21.5 14 20 15"/>
+                    </svg>
+                </div>
+
+                <div class="why-text">
+                    <strong>All Major Operators</strong>
+                    <span>Available</span>
+                </div>
+
+            </div>
+
+
+            <div class="why-feature">
+
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M3 9H21"/>
+                        <path d="M7 14H11"/>
+                    </svg>
+                </div>
+
+                <div class="why-text">
+                    <strong>Easy &amp; Secure</strong>
+                    <span>Payment</span>
+                </div>
+
+            </div>
+
+
+            <div class="why-feature">
+
+                <div class="why-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 12L8 8L12 12L16 8L20 12"/>
+                        <path d="M3 14L7 18C8 19 9.5 19 10.5 18L14 14"/>
+                        <path d="M21 14L17 18C16 19 14.5 19 13.5 18L10 14"/>
+                    </svg>
+                </div>
+
+                <div class="why-text">
+                    <strong>Trusted by</strong>
+                    <span>Thousands</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HAPPY CUSTOMERS / REVIEWS
+========================================================= -->
+
+<section class="reviews-section">
+
+    <div class="reviews-container">
+
+
+        <!-- HEADER -->
+
+        <div class="reviews-header">
+
+            <div class="reviews-title-wrap">
+
+                <div class="reviews-quote">
+                    “
+                </div>
+
+                <div class="reviews-heading-content">
+
+                    <h2>
+                        Happy Customers
+                    </h2>
+
+                    <p>
+                        What our customers say about us
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             REVIEW SLIDER
+        ================================================== -->
+
+        <div class="reviews-slider-wrap">
+
+
+            <!-- LEFT ARROW -->
+
+            <button
+                class="reviews-arrow reviews-arrow-left"
+                id="reviewsPrev"
+                type="button"
+                aria-label="Previous reviews"
+            >
+                ‹
+            </button>
+
+
+            <!-- VIEWPORT -->
+
+            <div
+                class="reviews-viewport"
+                id="reviewsViewport"
+            >
+
+                <div
+                    class="reviews-track"
+                    id="reviewsTrack"
+                >
+
+
+                    <!-- REVIEW 1 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar">
+                            R
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Ramesh Kumar
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Super collection of fancy numbers.
+                                Very good support and fast service.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 2 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-blue">
+                            S
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Sneha Priya
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Got my lucky number at best price.
+                                Highly recommended!
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 3 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-purple">
+                            K
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Karthik
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Excellent service. Genuine numbers
+                                and quick process.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 4 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-green">
+                            A
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Arun Reddy
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Easy selection process and helpful
+                                customer support.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 5 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-pink">
+                            P
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Priya Sharma
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Beautiful premium numbers and
+                                smooth booking experience.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 6 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-orange">
+                            V
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Vinay Kumar
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Found the number I wanted very
+                                quickly. Great service.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 7 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-dark">
+                            M
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Mahesh
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Good collection, clear pricing and
+                                responsive support team.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 8 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-teal">
+                            N
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Naveen
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Very simple process from choosing
+                                the number to enquiry.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 9 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-indigo">
+                            D
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Deepak
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Premium numbers with a very smooth
+                                customer experience.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- REVIEW 10 -->
+
+                    <article class="review-card">
+
+                        <div class="review-avatar avatar-red">
+                            S
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-name">
+                                Sai Krishna
+                            </div>
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Excellent response and quick
+                                assistance throughout the process.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT ARROW -->
+
+            <button
+                class="reviews-arrow reviews-arrow-right"
+                id="reviewsNext"
+                type="button"
+                aria-label="Next reviews"
+            >
+                ›
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     LOGIN / REGISTER MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="loginModal"
+>
+
+
+    <div class="login-modal">
+
+
+        <button
+            class="modal-close"
+            id="closeLogin"
+            type="button"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+
+        <!-- LOGO -->
+
+        <div class="login-brand">
+
+            <img
+                src="img/Company Logo.png"
+                alt="Varma Fancy Numbers"
+            >
+
+        </div>
+
+
+
+        <h2>
+            Welcome Back
+        </h2>
+
+
+        <p class="login-subtitle">
+            Login to continue your premium number journey
+        </p>
+
+
+
+        <!-- AUTH TABS -->
+
+        <div class="auth-tabs">
+
+
+            <button
+                class="auth-tab active"
+                data-auth="login"
+                type="button"
+            >
+                Login
+            </button>
+
+
+            <button
+                class="auth-tab"
+                data-auth="register"
+                type="button"
+            >
+                Register
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             LOGIN FORM
+        ================================================== -->
+
+        <form
+            id="loginForm"
+            class="auth-form"
+        >
+
+
+            <label>
+                Mobile Number / Email
+            </label>
+
+
+            <input
+                type="text"
+                placeholder="Enter mobile number or email"
+                autocomplete="username"
+                required
+            >
+
+
+
+            <label>
+                Password
+            </label>
+
+
+            <div class="password-wrapper">
+
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter password"
+                    autocomplete="current-password"
+                    required
+                >
+
+
+                <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Show password"
+                >
+                    👁
+                </button>
+
+
+            </div>
+
+
+
+            <div class="forgot-row">
+
+                <button
+                    type="button"
+                    id="forgotPasswordLink"
+                >
+                    Forgot Password?
+                </button>
+
+            </div>
+
+
+
+            <button
+                class="auth-submit"
+                type="submit"
+            >
+                Login
+            </button>
+
+
+
+            <div class="or-divider">
+                <span>OR</span>
+            </div>
+
+
+
+            <button
+                class="google-login"
+                id="googleLogin"
+                type="button"
+            >
+
+                <span>
+                    G
+                </span>
+
+                Continue with Google
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- =================================================
+             REGISTER FORM
+        ================================================== -->
+
+        <form
+            id="registerForm"
+            class="auth-form hidden"
+        >
+
+
+            <label>
+                Full Name
+            </label>
+
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+            >
+
+
+
+            <label>
+                Mobile Number
+            </label>
+
+
+            <input
+                type="tel"
+                placeholder="Enter mobile number"
+                autocomplete="tel"
+                required
+            >
+
+
+
+            <label>
+                Email
+            </label>
+
+
+            <input
+                type="email"
+                placeholder="Enter email"
+                autocomplete="email"
+                required
+            >
+
+
+
+            <label>
+                Password
+            </label>
+
+
+            <div class="password-wrapper">
+
+
+                <input
+                    type="password"
+                    placeholder="Create password"
+                    autocomplete="new-password"
+                    required
+                >
+
+
+                <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Show password"
+                >
+                    👁
+                </button>
+
+
+            </div>
+
+
+
+            <button
+                class="auth-submit"
+                type="submit"
+            >
+                Create Account
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ADVANCED SEARCH MODAL
+========================================================= -->
+
+<div
+    class="advanced-overlay"
+    id="advancedOverlay"
+>
+
+
+    <div class="advanced-modal">
+
+
+        <button
+            id="advancedClose"
+            class="modal-close"
+            type="button"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+
+        <div class="advanced-title">
+
+
+            <span class="advanced-filter-icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M4 6h16"
+                    ></path>
+
+                    <path
+                        d="M7 12h10"
+                    ></path>
+
+                    <path
+                        d="M10 18h4"
+                    ></path>
+
+                </svg>
+
+            </span>
+
+
+
+            <div>
+
+                <span>
+                    SMART FILTER
+                </span>
+
+                <h2>
+                    Advanced Search
+                </h2>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FILTER GRID -->
+
+        <div class="advanced-grid">
+
+
+            <!-- OPERATOR -->
+
+            <div class="advanced-field">
+
+                <label>
+                    Operator
+                </label>
+
+                <select id="advancedOperator">
+
+                    <option value="All">
+                        All Operators
+                    </option>
+
+                    <option value="Airtel">
+                        Airtel
+                    </option>
+
+                    <option value="Jio">
+                        Jio
+                    </option>
+
+                    <option value="VI">
+                        Vi
+                    </option>
+
+                    <option value="BSNL">
+                        BSNL
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- MAX PRICE -->
+
+            <div class="advanced-field">
+
+                <label>
+                    Maximum Price
+                </label>
+
+                <input
+                    id="advancedMaxPrice"
+                    type="number"
+                    min="0"
+                    placeholder="₹ Maximum"
+                >
+
+            </div>
+
+
+
+            <!-- PATTERN -->
+
+            <div class="advanced-field">
+
+                <label>
+                    Number Pattern
+                </label>
+
+                <input
+                    id="advancedPattern"
+                    type="text"
+                    placeholder="e.g. 9999"
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CHECKBOXES -->
+
+        <div class="advanced-checks">
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="advancedPremium"
+                >
+
+                Premium Only
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="advancedOffer"
+                >
+
+                Offers Only
+
+            </label>
+
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="advanced-actions">
+
+
+            <button
+                id="clearFilters"
+                type="button"
+                class="clear-filter-btn"
+            >
+                Clear
+            </button>
+
+
+            <button
+                id="applyFilters"
+                type="button"
+                class="apply-filter-btn"
+            >
+                Apply Filters
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast-message"
+    id="toastMessage"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- =========================================================
+     PREMIUM FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- =================================================
+             BRAND
+        ================================================== -->
+
+        <div class="footer-brand">
+
+            <a
+                href="#"
+                class="footer-logo-link"
+            >
+
+                <img
+                    src="img/Company Logo.png"
+                    alt="Varma Fancy Numbers"
+                    class="footer-logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#allNumbers">
+                        All Numbers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#offers">
+                        Offers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        How It Works
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =================================================
+             POPULAR CATEGORIES
+        ================================================== -->
+
+        <div class="footer-column">
+
+            <h3>
+                Popular Categories
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        VIP Numbers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Business Numbers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Birthday Numbers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Couple Numbers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Sequence Numbers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Premium Numbers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTACT + SOCIAL
+        ================================================== -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <a
+                href="tel:+919876543210"
+                class="footer-contact-item"
+            >
+
+                <span class="footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6.6 2.8L9.1 2C9.7 1.8 10.3 2.1 10.6 2.7L12 6.1C12.2 6.6 12.1 7.1 11.7 7.5L9.9 9.1C11 11.3 12.7 13 14.9 14.1L16.5 12.3C16.9 11.9 17.4 11.8 17.9 12L21.3 13.4C21.9 13.7 22.2 14.3 22 14.9L21.2 17.4C21 18.2 20.3 18.8 19.5 18.9C10.7 20 4 13.3 5.1 4.5C5.2 3.7 5.8 3 6.6 2.8Z"/>
+                    </svg>
+
+                </span>
+
+                <span>
+                    +91 98765 43210
+                </span>
+
+            </a>
+
+
+            <a
+                href="mailto:support@varmafancynumbers.com"
+                class="footer-contact-item"
+            >
+
+                <span class="footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <rect
+                            x="3"
+                            y="5"
+                            width="18"
+                            height="14"
+                            rx="2"
+                        />
+
+                        <path d="M3 7L12 13L21 7"/>
+                    </svg>
+
+                </span>
+
+                <span>
+                    support@varmafancynumbers.com
+                </span>
+
+            </a>
+
+
+            <div class="footer-contact-item">
+
+                <span class="footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21C16.5 16.2 19 12.6 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 12.6 7.5 16.2 12 21Z"/>
+                        <circle
+                            cx="12"
+                            cy="9.5"
+                            r="2.5"
+                        />
+                    </svg>
+
+                </span>
+
+                <span>
+                    Hyderabad, Telangana, India
+                </span>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="footer-social-row">
+
+                <a
+                    href="#"
+                    class="social-icon facebook"
+                    aria-label="Facebook"
+                >
+                    f
+                </a>
+
+                <a
+                    href="#"
+                    class="social-icon instagram"
+                    aria-label="Instagram"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <rect
+                            x="4"
+                            y="4"
+                            width="16"
+                            height="16"
+                            rx="4"
+                        />
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="3.5"
+                        />
+                        <circle
+                            cx="17.3"
+                            cy="6.8"
+                            r="1"
+                            fill="currentColor"
+                            stroke="none"
+                        />
+                    </svg>
+                </a>
+
+                <a
+                    href="#"
+                    class="social-icon youtube"
+                    aria-label="YouTube"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M21 8.2C20.8 6.9 19.8 6 18.5 5.8C16.6 5.5 14.3 5.3 12 5.3C9.7 5.3 7.4 5.5 5.5 5.8C4.2 6 3.2 6.9 3 8.2C2.8 9.4 2.7 10.7 2.7 12C2.7 13.3 2.8 14.6 3 15.8C3.2 17.1 4.2 18 5.5 18.2C7.4 18.5 9.7 18.7 12 18.7C14.3 18.7 16.6 18.5 18.5 18.2C19.8 18 20.8 17.1 21 15.8C21.2 14.6 21.3 13.3 21.3 12C21.3 10.7 21.2 9.4 21 8.2Z"
+                        />
+
+                        <path
+                            d="M10 9L16 12L10 15V9Z"
+                            fill="white"
+                            stroke="none"
+                        />
+                    </svg>
+                </a>
+
+                <a
+                    href="#"
+                    class="social-icon twitter"
+                    aria-label="Twitter"
+                >
+                    𝕏
+                </a>
+
+                <a
+                    href="https://wa.me/919876543210"
+                    class="social-icon whatsapp"
+                    aria-label="WhatsApp"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.5 3.5C18.2 1.2 15.2 0 12 0C5.4 0 .1 5.3.1 11.9C.1 14 .7 16 1.8 17.7L0 24L6.5 22.3C8.2 23.3 10.1 23.8 12 23.8C18.6 23.8 23.9 18.5 23.9 11.9C23.9 8.7 22.7 5.7 20.5 3.5Z"
+                            fill="white"
+                            stroke="none"
+                        />
+
+                        <path
+                            d="M8.1 6.5C8.4 6.4 8.7 6.4 9 6.9L10 9C10.2 9.4 10.1 9.7 9.8 10.1L8.9 11C9.7 12.7 11 14 12.7 14.8L13.6 13.9C14 13.6 14.3 13.5 14.7 13.7L16.8 14.7C17.3 15 17.3 15.3 17.2 15.6C17 16.5 16.4 17.1 15.5 17.3C12.1 18 6.3 12.2 7 8.8C7.2 7.9 7.8 7.3 8.1 6.5Z"
+                            fill="#25D366"
+                            stroke="none"
+                        />
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PAYMENT METHODS
+    ====================================================== -->
+
+    <div class="footer-payment-row">
+
+        <span class="payment-title">
+            Secure Payments
+        </span>
+
+
+        <div class="payment-methods">
+
+    <div class="payment-logo">
+        <img
+            src="img/visa.png"
+            alt="Visa"
+        >
+    </div>
+
+    <div class="payment-logo">
+        <img
+            src="img/mastercard.png"
+            alt="Mastercard"
+        >
+    </div>
+
+    <div class="payment-logo">
+        <img
+            src="img/rupay.png"
+            alt="RuPay"
+        >
+    </div>
+
+    <div class="payment-logo">
+        <img
+            src="img/upi.png"
+            alt="UPI"
+        >
+    </div>
+
+</div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BOTTOM BAR
+    ====================================================== -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-copyright">
+
+            © <span id="footerYear">2026</span>
+            Varma Fancy Numbers.
+            All Rights Reserved.
+
+        </div>
+
+
+        <div class="footer-legal">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <span>|</span>
+
+            <a href="#">
+                Terms &amp; Conditions
+            </a>
+
+            <span>|</span>
+
+            <a href="#">
+                Refund Policy
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/919876543210"
+    class="footer-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+>
+    <img
+        src="img/whatsapp.png"
+        alt="WhatsApp"
+    >
+</a>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script
+    src="js/header.js"
+></script>
+
+
+</body>
+
+</html>
